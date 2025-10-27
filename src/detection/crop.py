@@ -1,3 +1,8 @@
+import os, cv2, json, uuid
+from tqdm import tqdm
+from retinaface import RetinaFace
+
+
 def process_image(image_path, output_dir, metadata):
     img = cv2.imread(image_path)
     if img is None:
@@ -67,3 +72,4 @@ def main(input_dir="input", output_dir="output/faces_retina"):
 
 if __name__ == "__main__":
     main()
+
